@@ -25,16 +25,20 @@ class Array:
             self.length += 1
 
     def pop(self):
+        last_item = self.data[str(self.len - 1)]
         del self.data[str(self.len - 1)]
         self.length -= 1
+        return last_item
 
 
 new_arr = Array()
 new_arr.push('hi')
 new_arr.push('yes!!')
 new_arr.push('this is conquered')
-new_arr.pop()
+print(new_arr.pop())
 new_arr.extend(['wow', 'this', 'is', 'cool'])
-new_arr.pop()
+print(new_arr.pop())
+
 print(new_arr.get(0))
 print(new_arr.show_list)
+print(new_arr.len)
